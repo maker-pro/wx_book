@@ -1,0 +1,52 @@
+/* pages/find/find.wxss */
+swiper {
+    width:100%;
+    height:400rpx
+}
+swiper image {
+    width:100%;
+    height:400rpx
+}
+.find-hot-box-style {
+    font-size: 35rpx;
+    letter-spacing: 6rpx;
+}
+.find-hot-box-title-style {
+    font-size: 40rpx;
+    font-weight: 900;
+}
+.content {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    margin-top: 10rpx;
+}
+.hot-title-box {
+    margin: 35rpx 20rpx 30rpx;
+    border-left: blue 2px solid;
+    padding-left: 10rpx;
+}
+.hot-title-box view {
+    display: inline;
+    line-height: 50rpx;
+}
+.hot-title-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hot-title-box .more-book {
+    color: blue;
+}
+.hot-title-box .more-book .more-book-icon {
+    margin-left: 10rpx;
+}
+.network-bad-loading-image {
+    width: 30%;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+}

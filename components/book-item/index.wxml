@@ -1,0 +1,6 @@
+<!--components/book-item/index.wxml-->
+<view class="book-item-box">
+    <image class="book-item-cover" src="{{book.book_cover}}"></image>
+    <text class="text book-item-title">{{book.title}}</text>
+    <text class="text book-item-author">{{book.author}}</text>
+</view>

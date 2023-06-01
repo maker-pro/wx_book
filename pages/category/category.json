@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "category-list": "/components/category-list/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "分类"
+}

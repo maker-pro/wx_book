@@ -1,0 +1,122 @@
+/* pages/chaptercontent/chaptercontent.wxss */
+.background-setting-day {
+    background: white;
+    color: black;
+}
+.background-setting-night {
+    background: black;
+    color: white;
+}
+.chapter-content-box {
+    padding: 0px 20rpx;
+}
+.chapter-title {
+    font-size: 48rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
+    line-height: 48rpx;
+    padding-top: 40rpx;
+}
+.chapter-content-item {
+    line-height: 75rpx;
+    text-indent: 2em;
+    word-break: break-all;
+}
+.chapter-content-list ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+    display: none;
+}
+
+.setting-box {
+    /* height: 100rpx; */
+    width: 100%;
+    position: fixed;
+    background-color: #F5F5F5;
+}
+.setting-box-title {
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    font-weight: 500;
+    letter-spacing: 10rpx;
+}
+.setting-box-item {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    padding: 10rpx 0;
+    text-align: center;
+}
+.item-icon {
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    height: 60rpx;
+    line-height: 100rpx;
+}
+.setting-top-box {
+    overflow: scroll;
+}
+.chapter-model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.chapter-model .chapter-model-loading {
+    width: 10%;
+    margin-top: 25%;
+}
+.chapter-model .chapter-model-item {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    margin-top: 15rpx;
+    padding: 15rpx;
+    border: brown 1px solid;
+    width: 90%;
+}
+
+.font-model-background-set {
+    height: 100rpx;
+    border: 1px solid #cccccc;
+}
+.background-type {
+    width: 50%;
+    height: 100rpx;
+    display: inline-block;
+    letter-spacing: 20rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.night-background {
+    background-color: #7b7b7bf0;
+    color: white;
+}
+.background-active {
+    box-shadow: 2px 5px 5px #aaaaaa;
+}
+.background-icon {
+    height: 50rpx;
+    width: 50rpx;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.font-model-font-set {
+    height: 100rpx;
+}
+.font-type {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    line-height: 100rpx;
+}
+.font-type-active {
+    font-weight: bold;
+}

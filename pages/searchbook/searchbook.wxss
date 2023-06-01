@@ -1,0 +1,46 @@
+/* pages/searchbook/searchbook.wxss */
+.search-input {
+    margin-top: 20rpx;
+}
+.search-input .search-input-text {
+    border: 1px solid #cfd4db;
+    border-radius: 2rem;
+    height: 30px;
+    padding: 6rpx 10rpx;
+}
+.search-category {
+    margin: 20rpx auto;
+}
+.search-category button {
+    margin-left: 20rpx;
+}
+
+.search-book-box-style {
+    font-size: 35rpx;
+    letter-spacing: 6rpx;
+}
+.search-book-box-title-style {
+    font-size: 40rpx;
+    font-weight: 900;
+}
+.content {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    margin-top: 10rpx;
+}
+.bottom-line {
+    text-align: center;
+    padding: 28rpx;
+    color: #cccccc;
+    font-size: 30rpx;
+}
+.network-bad-loading-image {
+    width: 30%;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+}

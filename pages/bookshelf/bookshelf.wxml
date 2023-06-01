@@ -1,0 +1,20 @@
+<!--pages/bookshelf/bookshelf.wxml-->
+<image wx:if="{{loading_fail}}" class="network-bad-loading-image" mode="widthFix" src="/images/gif/loading.gif"></image>
+<view wx:else class="box-container {{edit_status ? 'edit-delete-background': ''}}">
+    <view class="top-edit" wx:if="{{book_list.length > 0}}">
+        <view wx:if="{{edit_status}}">
+            <text class="edit-delete-cancel" bind:tap="deleteCancel">取消</text>
+            <text class="edit-delete-submit" bind:tap="deleteSubmit">删除</text>
+        </view>
+        <text class="edit-text" wx:else  bind:tap="onEdit">编辑</text>
+    </view>
+
+    <view class="bookshelf-list" wx:if="{{book_list.length > 0}}">
+        <block wx:for="{{book_list}}" wx:key="index">
+            <book-item class="bookshelf-item {{need_delete_book_map[book_list[index].book_id] ? 'bookshelf-item-delete' : ''}}" book="{{book_list[index]}}" bind:tap="jumpToChapterContent" data-book-id="{{book_list[index].book_id}}"></book-item>
+        </block>
+    </view>
+    <view class="not-book-show" wx:if="{{book_list.length == 0}}">
+        这里空空如也~
+    </view>
+</view>

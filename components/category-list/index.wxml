@@ -1,0 +1,6 @@
+<!--components/category-list/index.wxml-->
+<view class="category-list-container">
+    <block wx:for="{{category}}" wx:key=index">
+        <category-item class="category-item" category_item="{{item}}"></category-item>
+    </block>
+</view>

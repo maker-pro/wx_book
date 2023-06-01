@@ -1,0 +1,10 @@
+<!--pages/myhome/myhome.wxml-->
+<view class="box-container">
+    <view class="top-container">
+        <l-avatar l-text-class="l-avatar-text" class="l-avatar" placement="bottom" src="{{avatarUrl}}" text="{{userName}}" size="180"/>
+    </view>
+
+    <view class="list-container">
+        <l-list title="关于我们" icon="customer-service" bind:tap="toAbout" />
+    </view>
+</view>

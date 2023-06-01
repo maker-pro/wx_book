@@ -1,0 +1,11 @@
+<!--pages/category/category.wxml-->
+<image wx:if="{{loading_fail}}" class="network-bad-loading-image" mode="widthFix" src="/images/gif/loading.gif"></image>
+<view wx:else class="category-box">
+  <view class="top-bar">
+    <block wx:for="{{category_list_key}}" wx:key="index">
+      <text class="top-bar-name top-bar-active" wx:if="{{item == category_list_active_key}}">{{item}}</text>
+      <text class="top-bar-name" wx:else bind:tap="onChangeCategory" data-type="{{item}}">{{item}}</text>
+    </block>
+  </view>
+  <category-list category="{{category_list[category_list_active_key]}}"></category-list>
+</view>

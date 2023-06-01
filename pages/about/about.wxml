@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class="about-container">
+    <view class="title">关于我们</view>
+    <view>本项目仅供学习使用。项目中使用的数据均来自于网络公开数据。</view>
+    <view>本项目提供了近三百本流行小说，让读者畅享阅读乐趣</view>
+    <view class="author">项目作者：JoeWang</view>
+</view>

@@ -1,0 +1,17 @@
+/* components/category-list/index.wxss */
+.category-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 300rpx;
+    height: 250rpx;
+    padding: 15rpx 20rpx;
+    box-shadow: 5rpx 5rpx 5rpx #cccccc;
+}
+.category-item-container .text{
+    font-size: 14px;
+}
+.category-item-container .image {
+    width: 55%;
+}

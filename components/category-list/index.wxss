@@ -1,0 +1,8 @@
+/* components/category-list/index.wxss */
+.category-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15rpx 20rpx 0;
+}

@@ -1,0 +1,39 @@
+<!--pages/searchbook/searchbook.wxml-->
+<image wx:if="{{loading_fail}}" class="network-bad-loading-image" mode="widthFix" src="/images/gif/loading.gif"></image>
+<view wx:else class="search-book-container">
+    <view class="search-input">
+        <input class="search-input-text" placeholder="查找书籍" bindconfirm="searchBookByCategory" bindinput="chengeInputText" />
+        <view class="search-category">
+            <view class="search-category-one">
+                <block wx:for="{{category_list}}" wx:key="index">
+                    <button wx:if="{{category_level_1 == index}}" type="primary" size="mini">{{item.name}}</button>
+                    <button wx:else type="default" size="mini" bind:tap="onChangeCategoryLevel1" data-category="{{index}}">{{item.name}}</button>
+                </block>
+            </view>
+            <view class="search-category-two">
+                <block wx:for="{{category_level_2_list}}" wx:key="index">
+                    <button type="primary" size="mini" wx:if="{{item.id == category_level_2}}">{{item.name}}</button>
+                    <button type="default" size="mini" wx:else bind:tap="onChangeCategoryLevel2" data-category="{{item.id}}">{{item.name}}</button>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    <view class="search-book-box">
+        <block wx:for="{{book_list}}" wx:key="index">
+            <l-card type="primary" 
+                l-class="search-book-box-style"
+                l-title-class="search-book-box-title-style"
+                data-book-id="{{item.book_id}}" 
+                image="{{item.image_url}}" 
+                image-mode="widthFix"
+                title="{{item.title}}"
+                bind:tap="onGoToBookDetail1"
+            >
+                <!-- 此处为content -->
+                <view class="content">{{item.detail}}</view>
+            </l-card>
+        </block>
+    </view>
+    <view class="bottom-line" wx:if="{{no_more}}">没有更多了</view>
+</view>

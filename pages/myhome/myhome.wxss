@@ -1,0 +1,21 @@
+/* pages/myhome/myhome.wxss */
+page {
+    background-color: #EFEFEF;
+}
+.top-container {
+    height: 400rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 70rpx;
+}
+.top-container > .user-name {
+    margin-bottom: 20rpx;
+}
+.list-container {
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    background-color: white;
+}

@@ -1,0 +1,18 @@
+/* pages/category/category.wxss */
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.top-bar-name {
+    padding: 30rpx 60rpx;
+}
+.top-bar-active {
+    border-bottom: 1px solid blue;
+}
+.network-bad-loading-image {
+    width: 30%;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+}

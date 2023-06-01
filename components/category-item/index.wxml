@@ -1,0 +1,5 @@
+<!--components/category-list/index.wxml-->
+<view class="category-item-container" bind:tap="onJumpToSearchPage">
+    <text class="text">{{category_item.name}}</text>
+    <image class="image"mode="widthFix" src="{{category_item.cover}}"></image>
+</view>

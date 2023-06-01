@@ -1,0 +1,48 @@
+<!--pages/chaptercontent/chaptercontent.wxml-->
+<view class="chapter-content-box {{background_type == 'day-background' ? 'background-setting-day' : 'background-setting-night'}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="tochend" bind:tap="showSettingBox" style="font-size: {{font_size_config[font_size]}}rpx;">
+    <scroll-view style="height: {{window_height}};" class="chapter-content-list" scroll-y="true" bindscroll="scrollFun" scroll-top="{{scroll_top}}" scroll-with-animation="true">
+        <view class="chapter-title">
+            {{chapter_title}}
+        </view>
+        <view wx:for="{{chapter_content_list}}" wx:key="index" class="chapter-content-item">
+            {{item}}
+        </view>
+    </scroll-view>
+</view>
+<view class="setting-box" style="bottom:{{setting_box_bottom}}rpx">
+    <view class="setting-box-title" wx:if="{{setting_box_chapter_list}}">目录</view>
+    <view class="setting-box-title" wx:if="{{setting_box_font_set}}">字体设置</view>
+    <view class="setting-top-box" style="height: {{setting_top_box_header}}rpx;" wx:if="{{setting_box_chapter_list || setting_box_font_set}}">
+        <view class="chapter-model" wx:if="{{setting_box_chapter_list}}">
+            <image class="chapter-model-loading" wx:if="{{chapter_chapter_loading}}" mode="widthFix" src="/images/gif/loading.gif"></image>
+            <view class="chapter-model-item" wx:for="{{book_chapter_list}}" wx:key="index" data-book-id="{{item.book_id}}" data-chapter-id="{{item.chapter_id}}" bind:tap="jumpToChapterContent">
+                {{item.chapter_title}}
+            </view>
+        </view>
+        <view class="font-model" wx:if="{{setting_box_font_set}}">
+            <view class="font-model-background-set">
+                <view class="background-type day-background {{background_type == 'day-background' ? 'background-active' : ''}}" bind:tap="changeBackgroundType" data-type="day">
+                    <image class="background-icon" mode="aspectFit" src="/images/icon/day.png"></image>
+                    <text>白天</text>
+                </view>
+                <view class="background-type night-background {{background_type == 'night-background' ? 'background-active' : ''}}" bind:tap="changeBackgroundType" data-type="night">
+                    <image class="background-icon" mode="aspectFit" src="/images/icon/night.png"></image>
+                    <text>黑夜</text>
+                </view>
+            </view>
+            <view class="font-model-font-set">
+                <view class="font-type {{font_size == 'small' ? 'font-type-active' : ''}}" bind:tap="changeFontSize" data-type="small">小</view>
+                <view class="font-type {{font_size == 'middle' ? 'font-type-active' : ''}}" bind:tap="changeFontSize" data-type="middle">标准</view>
+                <view class="font-type {{font_size == 'big' ? 'font-type-active' : ''}}" bind:tap="changeFontSize" data-type="big">大</view>
+            </view>
+        </view>
+    </view>
+    <view class="setting-bottom-box">
+        <view class="setting-box-item" bind:tap="showChapterList">
+            <image mode="heightFix" class="item-icon" src="../../images/icon/list.png"></image>
+        </view>
+        <view class="setting-box-item" bind:tap="showFontSet">
+            <image mode="heightFix" class="item-icon" src="../../images/icon/font.png"></image>
+        </view>
+    </view>
+</view>

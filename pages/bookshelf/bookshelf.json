@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "book-item": "/components/book-item/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "书架"
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "l-card": "/miniprogram_npm/lin-ui/card/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "查找书籍"
+}

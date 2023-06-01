@@ -1,0 +1,54 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<image wx:if="{{loading_fail}}" class="network-bad-loading-image" mode="widthFix" src="/images/gif/loading.gif"></image>
+<view wx:else class="book-detail-box">
+    <view class="top-box" wx:if="{{book_info}}">
+        <image mode="aspectFill" class="head-img" src="{{book_info.image_url}}"></image>
+        <l-card type="primary" 
+            l-img-class="right-card" 
+            l-title-class="top-box-title"
+            l-class="top-box-style"
+            position="left" 
+            image="{{book_info.image_url}}"
+            title="{{book_info.title}}"
+            image-mode="widthFix"
+        >
+            <view class="content">
+                <view>{{'作者：' + book_info.author}}</view>
+                <view><text bind:tap="onJumpToSearchPage" data-category-id="{{book_info.category_id}}">{{'分类：' + book_info.category_name}}</text></view>
+            </view>
+        </l-card>
+    </view>
+    <view class="book-detail" wx:if="{{book_info}}">
+        <view class="book-detail-text  {{book_detail_show ? 'book-detail-text-show' : 'book-detail-text-hidden'}}">{{book_info.detail}}</view>
+        <view class="book-detail-more-btn">
+            <l-icon wx:if="{{!book_detail_show && book_info}}" name="down" bind:tap="onChangeDetailLength"/>
+        </view>
+    </view>
+    <view class="book-chapter-box" wx:if="{{book_chapter_list}}">
+        <view class="book-chapter-btn">
+            章节目录
+        </view>
+        <view class="book-chapter-list">
+            <view class="book-chapter-item" wx:for="{{book_chapter_list}}" wx:key="index" data-book-id="{{item.book_id}}" data-chapter-id="{{item.chapter_id}}" bind:tap="jumpToChapterContent">
+                {{item.chapter_title}}
+            </view>
+            <view wx:if="{{is_loading}}" class="show-more" bind:tap="onShowAllChapter">{{loading_text}}</view>
+        </view>
+    </view>
+
+    <view class="book-detail-bottom-btn">
+        <view class="add-book-self" bind:tap="onAddBookSelf">
+            <block wx:if="{{book_add_bookself}}">
+                <l-icon l-class="add-book-self-l-icon" color="#cccccc" name="success"/>
+                <text class="add-inactive">已添加书架</text>
+            </block>
+            <block wx:else>
+                <l-icon l-class="add-book-self-l-icon" color="red" name="success"/>
+                <text>添加书架</text>
+            </block>
+        </view>
+        <view class="status-read" bind:tap="jumpToChapterContent" data-chapter-id="{{book_chapter_list[0].chapter_id}}">
+            开始阅读
+        </view>
+    </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/find/find.wxml-->
+<image wx:if="{{loading_fail}}" class="network-bad-loading-image" mode="widthFix" src="/images/gif/loading.gif"></image>
+<view wx:else class="find-box">
+    <swiper interval="3000" circular vertical="{{false}}" indicator-dots="{{true}}" autoplay="{{true}}">
+        <block wx:for="{{swiper_key_list}}" wx:key="index">
+            <swiper-item>
+			<image data-book-id="{{item.book_id}}" bind:tap="onGoToBookDetail1" src="{{item.book_image_url}}"></image>
+		    </swiper-item>
+        </block>
+	</swiper>
+    <view class="find-hot-box">
+        <view class="hot-title-box">
+            <view class="hot-tips">热门书籍</view>
+            <view class="more-book" bind:tap="onGoToSearchBook">查看更多<l-icon class="more-book-icon" name="more" color="blue" size="40"/></view>
+        </view>
+        <block wx:for="{{hot_book_list}}" wx:key="index">
+            <l-card type="primary" 
+                l-class="find-hot-box-style"
+                l-title-class="find-hot-box-title-style"
+                data-book-id="{{item.book_id}}" 
+                image="{{item.image_url}}" 
+                image-mode="widthFix"
+                title="{{item.title}}"
+                bind:tap="onGoToBookDetail1"
+            >
+                <!-- 此处为content -->
+                <view class="content">{{item.detail}}</view>
+            </l-card>
+        </block>
+    </view>
+</view>

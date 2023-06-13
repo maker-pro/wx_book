@@ -35,6 +35,7 @@
 
 + 书架
 <img src="https://github.com/maker-pro/wx_book/assets/85552249/904c07db-574f-4ac7-bfd6-b99ec18f8887" width="200" />
+
 + 删除书架里面的书籍
 <img src="https://github.com/maker-pro/wx_book/assets/85552249/6991f54e-6697-4112-8bd3-2a103362d9e3" width="200" />
 <img src="https://github.com/maker-pro/wx_book/assets/85552249/fde1833a-18f6-4953-a557-cbd2550c4b72" width="200" />
@@ -55,7 +56,9 @@
 
 + 章节阅读
 <img src="https://github.com/maker-pro/wx_book/assets/85552249/d2c5a8a7-b7b6-4ae7-9d0f-f8d41f8d76e5" width="200" />
+
 + 目录选择
 <img src="https://github.com/maker-pro/wx_book/assets/85552249/6f26bc2b-0b8e-48d0-b735-9516ca03ac18" width="200" />
+
 + 背景设置、字体大小设置
 <img src="https://github.com/maker-pro/wx_book/assets/85552249/1e78920d-ec8e-4551-80f3-6e9162f9fdbc" width="200" />

@@ -28,7 +28,8 @@
 
 ## 页面图片
 + 首页
-![首页](https://github.com/maker-pro/wx_book/assets/85552249/d4c7ee11-19b2-4088-931d-37062ca6a8b8)
+<img src="https://github.com/maker-pro/wx_book/assets/85552249/d4c7ee11-19b2-4088-931d-37062ca6a8b8" width="200" />
+
 
 + 分类
 ![分类](https://github.com/maker-pro/wx_book/assets/85552249/ffcb955d-6e6a-45f8-8e8f-de2ddabe66c9)

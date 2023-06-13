@@ -77,7 +77,7 @@ Page({
         var search_text = this.data.search_text;
         // console.log(category_level_1 + '<--->' + category_level_2);
         wx.request({
-            url: app.baseUrl + 'search_book',
+            url: app.baseUrl + 'search_book_v2',
             data: {
                 category_level_1_id: category_level_1,
                 category_level_2_id: category_level_2,
@@ -140,7 +140,7 @@ Page({
     onReachBottom: function () {
         wx.showNavigationBarLoading();
         wx.request({
-            url: app.baseUrl + 'search_book',
+            url: app.baseUrl + 'search_book_v2',
             data: {
                 category_level_1_id: this.data.category_level_1,
                 category_level_2_id: this.data.category_level_2,

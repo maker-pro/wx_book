@@ -1,6 +1,6 @@
 ## wx_book 阅读类微信小程序
 基于 Lin UI 开发的阅读类微信小程序，已隐去 API，数据脱敏，仅供学习交流使用，如有侵权，请及时联。  
-<a href="https://github.com/maker-pro/wx_book_api" target="_blank">接口项目地址</a>
+[接口项目地址](https://github.com/maker-pro/wx_book_api)
 
 ## 功能
 + 热门书籍
